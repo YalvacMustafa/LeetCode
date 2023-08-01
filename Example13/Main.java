@@ -22,12 +22,11 @@ package leetcode.Example13;
         int sum = 0;
 
         for (int i = 0; i < n; i++) {
-            sum += mat[i][i]; // Adding elements from the primary diagonal
-            sum += mat[i][n - 1 - i]; // Adding elements from the secondary diagonal
+            sum += mat[i][i];
+            sum += mat[i][n - 1 - i]; 
         }
 
-        // If the matrix size is odd, one element from the secondary diagonal will be counted twice,
-        // so we need to subtract it.
+
         if (n % 2 == 1) {
             sum -= mat[n / 2][n / 2];
         }
